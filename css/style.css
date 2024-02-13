@@ -1,0 +1,115 @@
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.content {
+    padding: 8px;
+    margin-bottom: 64px;
+}
+
+input[type="text"], textarea {
+    font-size: 1rem;
+    border: solid 1px gray;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+input[type="submit"], a {
+    &.btn {
+        padding: 2px 8px;
+        border: 0 none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            opacity: 0.6;
+            transform: scale(1.1);
+        }
+
+        &:active {
+            opacity: 0.4;
+            transform: scale(1.1);
+        }
+    }
+
+    &.btn-sm {
+        font-size: 0.8rem;
+        line-height: 0.96rem;
+    }
+
+    &.btn-danger {
+        background: red;
+        color: white;
+    }
+
+    &.btn-primary {
+        background: blue;
+        color: white;
+    }
+
+    &.btn-outline-primary {
+        border: 1px solid blue;
+        background: white;
+        color: blue;
+    }
+
+    &[disabled] {
+        opacity: 0.4;
+    }
+}
+
+.dialog {
+    position: fixed;
+    top: 50px;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+.ml-1 {
+    margin-left: 4px;
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+
+.align-right {
+    text-align: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.each-line {
+    margin: 8px 0;
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+dialog#edit-dialog turbo-frame[busy] {
+    & > * {
+        display: none;
+    }
+
+    &::before {
+        content: url('../img/Settings.gif');
+        margin: 40px;
+        display: block;
+    }
+}
