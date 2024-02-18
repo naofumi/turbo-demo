@@ -1,3 +1,3 @@
-# Messages
+# SearchMessages
 
-MPAとして実装したバージョン。JavaScriptはhelpのアコーディオンにだけ使用している。
+MPAにTurbo.jsを読み込んでだけのバージョン。
