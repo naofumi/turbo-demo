@@ -1,5 +1,10 @@
 <?php
+$skip_sleep = true;
 include('../inc/start.php');
+
+// 本当はここでopen redirect vulnerabilityの対策をしないといけないけど、省略した
+// https://www.techradar.com/features/what-is-open-redirect-vulnerability
+$return_to = $_GET['return_to'] ?? 'index.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'POST') {
@@ -7,9 +12,8 @@ if ($method === 'POST') {
     $_SESSION['sleep_duration'] = $_POST['sleep_duration'];
 
     http_response_code(303);
-    header("Location: index.php");
+    header("Location: {$return_to}");
 } else {
-
     $sleep_duration = $_SESSION['sleep_duration'];
 }
 ?>

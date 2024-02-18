@@ -17,7 +17,7 @@ function load_default_messages()
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<?php include('../inc/head-redirect.php') ?>
+<?php include('../inc/head-turbo.php') ?>
 <body style="position:relative">
 
 <?php include('../inc/top_nav.php') ?>

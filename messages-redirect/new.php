@@ -15,7 +15,7 @@ if ($method === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-<?php include('../inc/head-redirect.php') ?>
+<?php include('../inc/head-turbo.php') ?>
 <body>
 <?php include('../inc/top_nav.php') ?>
 
