@@ -12,15 +12,7 @@ if (isset($_GET['query'])) {
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
-if ($method === 'POST') {
-//    $messages = $_SESSION['messages'];
-//    $messages[$id] = $_POST['message'];
-//    $_SESSION['messages'] = $messages;
-//    http_response_code(303);
-//    header("Location: index.php");
-} else {
-    $messages = array_values(messages_filter_by_query($_SESSION['messages'], $query));
-}
+$messages = array_values(messages_filter_by_query($_SESSION['messages'], $query));
 
 function messages_filter_by_query($messages, $query) {
     return array_filter($messages, function($message) use ($query) {
@@ -54,7 +46,7 @@ function load_default_messages()
         <form method="get">
             <label for="search">検索文字列</label>
             <input type="text" name="query" value="<?php echo $query ?>"
-                    oninput="this.form.requestSubmit()">
+                   oninput="this.form.requestSubmit()" id="query-input" data-turbo-permanent>
             <input type="submit" value="検索実行" class="btn btn-primary">
         </form>
     </div>
