@@ -3,6 +3,10 @@ html {
     font-family: sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
 }
@@ -12,14 +16,29 @@ body {
     margin-bottom: 64px;
 }
 
-input[type="text"], textarea {
+label {
+    font-size: 0.8rem;
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
     font-size: 1rem;
     border: solid 1px gray;
     border-radius: 4px;
     padding: 4px;
 }
 
-input[type="submit"], a {
+select {
+    appearance: none;
+    font-size: 1rem;
+    border: solid 1px gray;
+    border-radius: 4px;
+    padding: 4px 30px 4px 4px;
+    background: no-repeat right url('../img/blue-arrow-down.svg');
+}
+
+
+input[type="submit"], a, button {
     &.btn {
         padding: 2px 8px;
         border: 0 none;
