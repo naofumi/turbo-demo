@@ -46,8 +46,9 @@ function load_default_messages()
         <form method="get">
             <label for="search">検索文字列</label>
             <input type="text" name="query" value="<?php echo $query ?>"
-                   oninput="this.form.requestSubmit()" id="query-input" data-turbo-permanent>
+                   oninput="//this.form.requestSubmit()" id="query-input">
             <input type="submit" value="検索実行" class="btn btn-primary">
+            <div class="loader"><img src="../img/Settings.gif" height="24"></div>
         </form>
     </div>
     <div>
