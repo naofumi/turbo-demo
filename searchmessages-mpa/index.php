@@ -14,8 +14,9 @@ if (isset($_GET['query'])) {
 $method = $_SERVER['REQUEST_METHOD'];
 $messages = array_values(messages_filter_by_query($_SESSION['messages'], $query));
 
-function messages_filter_by_query($messages, $query) {
-    return array_filter($messages, function($message) use ($query) {
+function messages_filter_by_query($messages, $query)
+{
+    return array_filter($messages, function ($message) use ($query) {
         return str_contains($message, $query);
     });
 }
@@ -46,7 +47,7 @@ function load_default_messages()
         <form method="get">
             <label for="search">検索文字列</label>
             <input type="text" name="query" value="<?php echo $query ?>"
-                   oninput="//this.form.requestSubmit()" id="query-input">
+                   id="query-input">
             <input type="submit" value="検索実行" class="btn btn-primary">
             <div class="loader"><img src="../img/Settings.gif" height="24"></div>
         </form>
@@ -69,7 +70,9 @@ function load_default_messages()
         <div style="padding: 8px;">
             <ol>
                 <li>メッセージのリアルタイム検索機能です。検索文字列を入力すると、自動的に検索が走ります。</li>
-                <li>トップナビゲーションのSleepを使うと、サーバの応答時間を調整できます。遅いネットワークのシミュレーションに使えます。</li>
+                <li>
+                    トップナビゲーションのSleepを使うと、サーバの応答時間を調整できます。遅いネットワークのシミュレーションに使えます。
+                </li>
             </ol>
         </div>
 
@@ -82,8 +85,4 @@ function load_default_messages()
         <?php endfor; ?>
     </div>
 </div>
-<dialog class="dialog" id="edit-dialog">
-    <div><a href="javascript:void(0)" onclick="getElementById('edit-dialog').close()">X Close</a></div>
-    <turbo-frame id="edit-pane" target="_top"></turbo-frame>
-</dialog>
 </body>

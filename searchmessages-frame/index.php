@@ -55,7 +55,7 @@ function load_default_messages()
         <form method="get" data-turbo-frame="messages">
             <label for="search">検索文字列</label>
             <input type="text" name="query" value="<?php echo $query ?>"
-                   oninput="this.form.requestSubmit()">
+                   oninput="debounce(() => this.form.requestSubmit())()">
             <input type="submit" value="検索実行" class="btn btn-primary">
             <div class="loader"><img src="../img/Settings.gif" height="24"></div>
         </form>
@@ -95,8 +95,4 @@ function load_default_messages()
         </div>
     </turbo-frame>
 </div>
-<dialog class="dialog" id="edit-dialog">
-    <div><a href="javascript:void(0)" onclick="getElementById('edit-dialog').close()">X Close</a></div>
-    <turbo-frame id="edit-pane" target="_top"></turbo-frame>
-</dialog>
 </body>
