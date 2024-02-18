@@ -93,6 +93,17 @@ input[type="submit"], a, button {
     border-radius: 20px;
 }
 
+.loader {
+    img {
+        vertical-align: bottom;
+    }
+    display: none;
+}
+
+form[aria-busy="true"] .loader {
+    display: inline-block;
+}
+
 .ml-1 {
     margin-left: 4px;
 }
