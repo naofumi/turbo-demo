@@ -61,8 +61,6 @@ function load_default_messages()
             <div class="each-line">
                 <?php echo $messages[$i] ?>
                 <a href="edit.php?id=<?php echo $i ?>"
-                   data-turbo-frame="edit-pane"
-                   onclick="getElementById('edit-dialog').show()"
                    class="ml-2 btn btn-sm btn-primary">Edit</a>
                 <form method="post" action="delete.php?id=<?php echo $i ?>" style="display:inline-block;">
                     <input type="submit" value="Delete" class="btn btn-sm btn-danger">
@@ -71,8 +69,4 @@ function load_default_messages()
         <?php endfor; ?>
     </div>
 </div>
-<dialog class="dialog" id="edit-dialog">
-    <div><a href="javascript:void(0)" onclick="getElementById('edit-dialog').close()">X Close</a></div>
-    <turbo-frame id="edit-pane" target="_top"></turbo-frame>
-</dialog>
 </body>
