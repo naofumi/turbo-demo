@@ -19,7 +19,23 @@
       })
     </script>
 
-<!--    <meta name="turbo-cache-control" content="no-preview">-->
+    <!--    <meta name="turbo-cache-control" content="no-preview">-->
+    <!--    <meta name="turbo-cache-control" content="no-cache">-->
     <!-- 動作の再現性を高めるため -->
     <meta name="turbo-prefetch" content="false">
+
+    <style>
+        turbo-frame#edit-modal[busy] {
+            > * {
+                display: none;
+            }
+
+            &::before {
+                content: url('../img/Settings.gif');
+                margin: 40px auto;
+                width: 100px;
+                display: block;
+            }
+        }
+    </style>
 </head>
