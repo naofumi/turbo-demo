@@ -133,13 +133,14 @@ form[aria-busy="true"] .loader {
 }
 
 dialog#edit-dialog turbo-frame[busy] {
-    & > * {
+    > * {
         display: none;
     }
 
     &::before {
         content: url('../img/Settings.gif');
-        margin: 40px;
+        margin: 40px auto;
+        width: 100px;
         display: block;
     }
 }
