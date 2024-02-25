@@ -144,3 +144,9 @@ dialog#edit-dialog turbo-frame[busy] {
         display: block;
     }
 }
+
+turbo-frame[busy] {
+    .btn {
+        background: url('../img/Settings.gif');
+    }
+}
