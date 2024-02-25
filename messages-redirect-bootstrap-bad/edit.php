@@ -32,7 +32,7 @@ if ($method === 'POST') {
                 </div>
                 <div class="modal-body">
                     <form action="edit.php?id=<?php echo $id ?>" method="post">
-                        <textarea name="message" rows="5" cols="50"><?php echo $message ?></textarea>
+                        <textarea name="message" rows="5" class="w-100"><?php echo $message ?></textarea>
                         <div style="text-align: right">
                             <input type="submit" value="Save" class="btn btn-primary">
                         </div>
