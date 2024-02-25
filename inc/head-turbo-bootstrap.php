@@ -12,7 +12,6 @@
 
       Stimulus.register("modal", class extends Controller {
         connect() {
-          // this.modal = this.element
           this.modal = new bootstrap.Modal(this.element)
           this.modal.show()
         }
